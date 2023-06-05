@@ -11,7 +11,7 @@ window.addEventListener('scroll', () => {
   const imgSatu = document.querySelector('.overviews .satu');
   const overviews = document.querySelector('.overviews');
   const triger = window.scrollY + 300;
-  if (triger > overviews.offsetTop) {
+  if (triger > overviews.offsetTop && triger < (overviews.offsetTop + overviews.offsetHeight + 200)) {
     const pos = triger - overviews.offsetTop;
     imgZero.style.left = `-${pos / 7.14}px`;
     imgSatu.style.left = `${pos / 7.14}px`;
